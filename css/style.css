@@ -1,118 +1,129 @@
 :root {
-    --back: #A4DA39;
-    --verde: #1B685B;
-    --verdefos: #6CA201;
-    --blanco: #ffffff;
-    --amarillo: #ADA201;
-    --negro: black;
+  --back: #a4da39;
+  --verde: #1b685b;
+  --verdefos: #6ca201;
+  --blanco: #ffffff;
+  --amarillo: hsl(56, 99%, 34%);
+  --negro: black;
 }
-
 html {
-font-size: 62.5%;
-box-sizing: border-box;
-scroll-snap-type: y mandatory;
-
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-snap-type: y mandatory;
 }
-
-*, *:before, *:after {
-    box-sizing: inherit;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+h1.titulo {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: center;
+  color: var(--verde);
+}
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  background-color: var(--back);
+  height: 100%;
+  margin: 0;
+}
+h1.titulo {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+  text-align: center;
+  color: var(--verde);
+}
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+.navegacion-principal {
+  display: flex;
+  flex-direction: column;
+}
+.nav-bg {
+  background-color: var(--verdefos);
+}
+@media (min-width: 480px) {
+  .navegacion-principal {
+    flex-direction: row;
+    justify-content: space-between;
   }
-
-h1.titulo{
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 700;
-    font-size: 3rem;
-    text-align: center;
-    color: var(--verde);
 }
-body{
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 400;
-    font-size: 2rem;
-    background-color: var(--back);
-    
-    
+.navegacion-principal a {
+  display: block;
+  text-align: center;
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 2 rem;
+  font-weight: bold;
+  padding: 1rem;
 }
-
-h1.titulo{
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 700;
-    font-size: 4rem;
-    text-align: center;
-    color: var(--verde);
-}
-
-.contenedor{
-    max-width: 120rem;
-    margin: 0 auto;
-}
-
-.contenedor2{
-    position: absolute;
-    display: inline-block;
-    text-align: center;
-}
-
-
-
-.contenedor3{
-    position: absolute;
-    display: inline-block;
-    text-align: center;
-}
-
-
-.texto-encima{
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    right: 10px;
-}
-
-.info-principal{
-    max-width: 100%;
-    height: auto;
-    opacity: 0.4;
-}
-
-
-.navegacion-principal{
-    display: flex;
-    flex-direction: column;
-    
-   
-
-}
-
-.nav-bg{
-    background-color: var(--verdefos);
-    
-}
-
-@media (min-width: 480px ) {
-    .navegacion-principal{
-        flex-direction: row;
-        justify-content: space-between;
-        
-    }
-    
- }
-
- 
-
-.navegacion-principal a{
-    display: block;
-    text-align: center;
-    color: var(--blanco);
-    text-decoration: none;
-    font-size: 2 rem;
-    font-weight: bold;
-    padding: 1rem;
-
-}
-
 .navegacion-principal a:hover {
-    background-color: var(--amarillo);
-    color: var(--negro);
+  background-color: var(--amarillo);
+  color: var(--negro);
 }
-
+.fondo {
+  position: relative;
+}
+.fondo::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-image: url("../images/calc.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  z-index: -1;
+}
+.btn {
+  background-color: var(--verde);
+  font-size: 20px;
+}
+.btn:hover {
+  background-color: var(--amarillo);
+}
+.calc {
+  padding: 0% 10% 0% 10%;
+  width: 50%;
+  background: var(--back);
+  border-radius: 5rem;
+}
+section {
+  height: 100vh;
+}
+#contexto {
+  background: var(--blanco);
+  border-radius: 2rem;
+}
+.bg {
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+.explicacion {
+  position: relative;
+}
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+  .calc {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1515px) {
+  .calc {
+    width: 70%;
+  }
+}
