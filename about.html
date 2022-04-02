@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculadora Web</title>
+    <title>Recomendaciones</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
     <link rel="preload" href="css/normalize.css" as="style" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,12 +25,70 @@
       <h1 class="titulo">Calculadora de Huella de Carbono considerando el consumo Eléctrico</h1>
     </header>
     <div class="nav-bg">
-      <nav class="navegacion-principal contenedor">
-        <a href="index.html">Calculadora</a>
-        <a href="uso.html">Cómo usar la Calculadora</a>
-        <a href="informacion.html">Información</a>
-        <a href="about.html">Recomendaciónes</a>
+      <nav class="navbar navbar-expand-lg navegacion-principal">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <img src="./images/menu.png" alt="" />
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-fill w-100 me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./index.html">Calculadora</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./uso.html">Cómo usar la Calculadora</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./about.html">Recomendaciónes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./informacion.html">Información</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </div>
+
+    <main class="fondo">
+      <section id="explicacion">
+        <div class="container text-center pt-5 mb-5" id="uso">
+          <div id="contexto ">
+            <h1>Recomendaciones</h1>
+            <div id="pasos">
+              <p>
+                Ahorrando energía en nuestras casas contribuimos a disminuir los gases de efecto invernadero y las consecuencias del cambio climático. Los
+                consejos a seguir para evitar el mal uso de la electricidad son:
+              </p>
+              <ul>
+                <li><strong>Utilizar focos de bajo consumo:</strong> Ahorran hasta un 75% de energía.</li>
+                <li><strong>Apaga la luz</strong> de los ambientes que no estés utilizando.</li>
+                <li><strong>Usa la luz natural</strong> el tiempo que más puedas.</li>
+                <li><strong>Emplea la lavadora con carga completa:</strong> ahorrarás agua y electricidad.</li>
+                <li><strong>Desconecta</strong> todos los aparatos eléctricos que no estés utilizando.</li>
+                <li>
+                  De ser posible, <strong>usa energías alternativas</strong> para la producción de electricidad, como celdas fotovoltaicas para utilizar la
+                  energía solar o generadores eólicos.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
